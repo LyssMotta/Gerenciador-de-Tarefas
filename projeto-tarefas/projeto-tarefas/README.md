@@ -5,9 +5,6 @@ Projeto simples de **CRUD de tarefas** para demonstrar:
 - **Back-end** em Python com **Flask**
 - **ORM** com **SQLAlchemy** (SQLite)
 - **API REST** consumida por um **front-end** em JavaScript
-
-Ideal para portfólio e entrevistas de estágio.
-
 ---
 
 ## ✨ Funcionalidades
@@ -24,7 +21,8 @@ projeto-tarefas/
 │── backend/
 │   └── app.py          # Flask + SQLAlchemy + rotas
 │── frontend/
-│   ├── index.html      # UI simples
+│   ├── index.html      # Front-end HTML
+    ├── style.css       # CSS estilizado
 │   └── script.js       # Consome a API com fetch
 │── requirements.txt
 │── .gitignore
@@ -82,32 +80,3 @@ Exemplo via `curl`:
 ```bash
 curl -X POST http://127.0.0.1:5000/tarefas -H "Content-Type: application/json" -d "{"titulo":"Estudar","descricao":"Flask"}"
 ```
-
----
-
-## 📤 Como publicar no GitHub (rápido)
-1. Crie um repositório chamado **gerenciador-tarefas** no GitHub (sem README).
-2. Na raiz do projeto, rode:
-   ```bash
-   git init
-   git add .
-   git commit -m "Projeto: Flask + ORM + JS (CRUD de tarefas)"
-   git branch -M main
-   git remote add origin https://github.com/<seu-usuario>/gerenciador-tarefas.git
-   git push -u origin main
-   ```
-
-### Alternativa pelo site (sem Git instalado)
-- No GitHub, clique em **Add file → Upload files**, arraste a pasta toda e confirme o commit.
-
----
-
-## 🎥 Dica de apresentação
-- Grave um vídeo curto (1–2 min) criando, concluindo e deletando tarefas.  
-- Pode usar **Loom** (mais fácil) ou **OBS Studio**.  
-- Coloque o link do vídeo aqui no README (YouTube não listado ou Loom).
-
----
-
-## 🧾 Licença
-MIT — sinta-se à vontade para usar e melhorar.
