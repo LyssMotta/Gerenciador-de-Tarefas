@@ -9,8 +9,6 @@ Projeto simples de **CRUD de tarefas** para demonstrar:
 - **ORM** com **SQLAlchemy** (SQLite)
 - **API REST** consumida por um **front-end** em JavaScript
 
-Ideal para portfólio e entrevistas de estágio.
-
 ---
 
 ## ✨ Funcionalidades
@@ -27,7 +25,8 @@ projeto-tarefas/
 │── backend/
 │   └── app.py          # Flask + SQLAlchemy + rotas
 │── frontend/
-│   ├── index.html      # UI simples
+│   ├── index.html    # UI simples
+    ├── css 
 │   └── script.js       # Consome a API com fetch
 │── requirements.txt
 │── .gitignore
