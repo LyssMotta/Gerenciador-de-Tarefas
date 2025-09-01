@@ -1,88 +1,96 @@
-# Gerenciador-de-Tarefas
-🚀 Projeto "Gerenciador de Tarefas" — Aplicação full stack simples com Python (Flask + SQLAlchemy ORM) e JavaScript (HTML+JS+css). Permite criar, listar, atualizar e excluir tarefas em um banco SQLite, com API REST no back-end e interface web amigável no front-end.
+Gerenciador de Tarefas Full Stack
 
+🚀 Projeto Gerenciador de Tarefas — Aplicação full stack construída com Python (Flask + SQLAlchemy ORM) e JavaScript (HTML + CSS + JS). Permite criar, listar, atualizar e excluir tarefas em um banco SQLite, com API REST no back-end e interface web simples e funcional no front-end.
 
-# Gerenciador de Tarefas (Python + Flask + ORM + JavaScript)
+💻 Tecnologias Utilizadas
 
-Projeto simples de **CRUD de tarefas** para demonstrar:
-- **Back-end** em Python com **Flask**
-- **ORM** com **SQLAlchemy** (SQLite)
-- **API REST** consumida por um **front-end** em JavaScript
+Python com Flask para o back-end
 
----
+SQLAlchemy ORM para gerenciamento do banco SQLite
 
-## ✨ Funcionalidades
-- Criar tarefa (título e descrição)
-- Listar tarefas
-- Concluir tarefa
-- Deletar tarefa
+HTML e CSS  para o front-end
 
----
+Flask-CORS para permitir comunicação entre front-end e back-end
 
-## 🧱 Arquitetura
-```
-projeto-tarefas/
+✨ Funcionalidades
+
+Criar tarefas com título e descrição
+
+Listar todas as tarefas
+
+Atualizar tarefas (marcar como concluída)
+
+Deletar tarefas
+
+🏗 Estrutura do Projeto
+gerenciador-tarefas/
 │── backend/
-│   └── app.py          # Flask + SQLAlchemy + rotas
+│   └── app.py          # Flask + SQLAlchemy + rotas da API
 │── frontend/
-│   ├── index.html    # UI simples
-    ├── css 
-│   └── script.js       # Consome a API com fetch
-│── requirements.txt
+    ├── templates/
+│       └── index.html      # Interface web
+    └── static/
+         ├── css/
+         └── 3c1matu3-removebg-preview.png
+│── requirements.txt    # Dependências Python
 │── .gitignore
 │── README.md
-```
-O banco usado é **SQLite** (arquivo `tarefas.db` gerado automaticamente).
 
----
 
-## 🚀 Como rodar (local)
-> Recomendado Python 3.10+
+O banco SQLite (tarefas.db) é gerado automaticamente ao rodar a aplicação.
 
-1. Crie e ative um ambiente virtual na raiz do projeto:
-   ```bash
-   python -m venv venv
-   # Windows
-   venv\Scripts\activate
-   # Linux/Mac
-   source venv/bin/activate
-   ```
+🚀 Como Rodar Localmente
 
-2. Instale as dependências:
-   ```bash
-   pip install -r requirements.txt
-   ```
+Recomendado Python 3.10 ou superior
 
-3. Rode o back-end:
-   ```bash
-   cd backend
-   python app.py
-   ```
-   A API subirá em `http://127.0.0.1:5000`.
+Criar e ativar um ambiente virtual:
 
-4. Abra o front-end:
-   - Clique duas vezes em `frontend/index.html` ou
-   - Sirva com um servidor simples:
-     ```bash
-     # na pasta frontend
-     python -m http.server 8000
-     # acesse http://127.0.0.1:8000
-     ```
+python -m venv venv
+# Windows
+venv\Scripts\activate
+# Linux/Mac
+source venv/bin/activate
 
-> **Observação:** O CORS já está liberado no Flask via `Flask-Cors`, então o front-end (em file:// ou porta 8000) consegue consumir a API.
 
----
+Instalar dependências:
 
-## 🧪 Rotas da API
-- `GET /tarefas` → lista todas
-- `POST /tarefas` → cria tarefa  
-  Body JSON: `{ "titulo": "Estudar", "descricao": "ORM e JS" }`
-- `PUT /tarefas/<id>` → marca como **concluída**
-- `DELETE /tarefas/<id>` → remove
+pip install -r requirements.txt
 
-Exemplo via `curl`:
-```bash
-curl -X POST http://127.0.0.1:5000/tarefas -H "Content-Type: application/json" -d "{"titulo":"Estudar","descricao":"Flask"}"
-```
 
----
+Rodar o back-end:
+
+cd backend
+python app.py
+
+
+A API ficará disponível em http://127.0.0.1:5000.
+
+Abrir o front-end:
+
+Clique duas vezes em frontend/index.html
+ou
+
+Use um servidor local simples:
+
+cd frontend
+python -m http.server 8000
+# acesse http://127.0.0.1:8000
+
+🧪 Rotas da API
+
+GET /tarefas → lista todas as tarefas
+
+POST /tarefas → cria nova tarefa
+
+{ "titulo": "Estudar", "descricao": "Flask + ORM" }
+
+
+PUT /tarefas/<id> → marca tarefa como concluída
+
+DELETE /tarefas/<id> → remove tarefa
+
+Exemplo via curl:
+
+curl -X POST http://127.0.0.1:5000/tarefas \
+-H "Content-Type: application/json" \
+-d '{"titulo":"Estudar","descricao":"Flask"}'
