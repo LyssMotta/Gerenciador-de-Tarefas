@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Full Stack - Gerenciador de Tarefas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Portfólio Full Stack</h1>
+            <p>Exemplo de Gerenciador de Tarefas para Clientes</p>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h2>Olá! Eu sou <span>Lyss</span></h2>
+                <p>Criei um gerenciador de tarefas moderno que você pode usar para organizar suas atividades diárias de forma fácil e prática.</p>
+            </div>
+            <div class="hero-image">
+                <img src="{{ url_for('static', filename='3c1matu3-removebg-preview.png') }}" alt="Programador trabalhando">
+            </div>
+        </div>
+    </section>
+
+    <section class="todo-app">
+       <h2>Gerenciador de Tarefas</h2>
+       <div class="todo-container">
+           
+           <!-- Form para criar nova tarefa -->
+           <form action="/create" method="POST">
+               <input type="text" name="description" id="taskInput" placeholder="Digite uma nova tarefa" required>
+               <button type="submit" id="addTaskBtn">Adicionar</button>
+           </form>
+
+           <!-- Lista de tarefas -->
+           <ul>
+               {% for task in tasks %}
+               <li>
+                   <span>{{ task.description }}</span>
+                   <div class="task-actions">
+                       <!-- Botão Atualizar com margem direita -->
+                       <form action="/update/{{ task.id }}" method="POST" class="update">
+                           <input type="text" name="description" value="{{ task.description }}">
+                           <button type="submit">Atualizar</button>
+                       </form>
+
+                       <!-- Botão Excluir vermelho -->
+                       <form action="/delete/{{ task.id }}" method="POST">
+                           <button type="submit" class="delete">Excluir</button>
+                       </form>
+                   </div>
+               </li>
+               {% endfor %}
+           </ul>
+       </div>
+    </section>
+
+    <footer>
+        <p>Portfólio criado por <strong>Lyss Motta</strong> - Full Stack Developer</p>
+    </footer>
+</body>
+</html>
