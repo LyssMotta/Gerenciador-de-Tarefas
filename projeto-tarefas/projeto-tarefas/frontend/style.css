@@ -1,55 +1,106 @@
 
-body {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
+}
+
+body {
+    background-color: #ffffff;
+    color: #1a1919;
+}
+
+header {
+    background-color: #c500cf;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.hero {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    padding: 50px 0;
+    background-color: #ffa9de86;
 }
 
-.container {
-    background-color: #fff;
-    padding: 20px 30px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-    width: 400px;
+.hero-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 }
 
-h1 {
+.hero-text {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+}
+
+.hero-text h2 span {
+    color: #af4c4c;
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 250px;
     text-align: center;
-    color: #333;
 }
 
-input {
-    width: 70%;
+.hero-image img {
+    max-width: 50%;
+    border-radius: 10px;
+}
+
+.todo-app {
+    margin: 50px auto;
+    max-width: 500px;
+    background: rgb(228, 29, 29);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgb(231, 2, 231);
+}
+
+.todo-app h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.todo-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#taskInput {
     padding: 10px;
+    border-radius: 5px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-button {
-    padding: 10px 15px;
+#addTaskBtn {
+    padding: 10px;
     border: none;
-    background-color: #007BFF;
+    background-color: #4CAF50;
     color: white;
-    border-radius: 5px;
     cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 
-button:hover {
-    background-color: #0056b3;
+#addTaskBtn:hover {
+    background-color: #45a049;
 }
 
 ul {
     list-style: none;
-    padding: 0;
-    margin-top: 20px;
 }
 
 li {
+    background: #e2e1e1;
     padding: 10px;
-    background-color: #f9f9f9;
     margin-bottom: 10px;
     border-radius: 5px;
     display: flex;
@@ -58,9 +109,17 @@ li {
 }
 
 li button {
-    background-color: #dc3545;
+    background: red;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-li button:hover {
-    background-color: #a71d2a;
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #e55cf1;
+    color: white;
 }
