@@ -14,11 +14,11 @@ Flask-CORS para permitir comunicação entre front-end e back-end
 
 ✨ Funcionalidades
 
-Criar tarefas com título e descrição
+Criar tarefas 
 
 Listar todas as tarefas
 
-Atualizar tarefas (marcar como concluída)
+Atualizar tarefas 
 
 Deletar tarefas
 
